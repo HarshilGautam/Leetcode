@@ -1,0 +1,19 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        maj,c=0,0
+        for i in nums:
+            if (c==0):
+                c=1
+                maj=i
+            else:
+                if (i==maj):
+                    c=c+1
+                else:
+                    c=c-1
+        return(maj)
+
+            
